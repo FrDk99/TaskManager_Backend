@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a28254a8-0086-43d7-8e52-131045087287</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManager.Domain.Interfaces\TaskManager.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\TaskManager.Domain.Models\TaskManager.Domain.Models.csproj" />
+    <ProjectReference Include="..\TaskManager.Entities\TaskManager.Entities.csproj" />
+    <ProjectReference Include="..\TaskManager.UnitOfWork.Models\TaskManager.UnitOfWork.Models.csproj" />
+  </ItemGroup>
+
+</Project>

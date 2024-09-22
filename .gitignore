@@ -1,0 +1,49 @@
+# Ignorar archivos binarios de compilación
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Ignorar archivos de usuario de Visual Studio
+.vscode/
+.vs/
+*.csproj.user
+
+# Ignorar archivos generados por el SDK de NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Ignorar archivos de configuración de aplicación local
+appsettings.*.json
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos relacionados con Docker
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+*.dockerignore
+
+# Ignorar archivos de respaldo
+*.bak
+*.swp
+
+# Ignorar archivos de publicación
+publish/
+out/
+
+# Ignorar carpetas de test y cobertura
+TestResults/
+coverage/
+
+# Ignorar archivos de bloqueos de dependencias
+project.lock.json
+project.fragment.lock.json
+
+# Ignorar archivos de SSL para desarrollo local
+*.pfx
+*.cer
