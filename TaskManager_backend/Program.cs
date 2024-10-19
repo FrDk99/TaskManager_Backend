@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TaskManager.Domain.Interfaces;
 using TaskManager.Domain.Models;
+using TaskManager.Middleware;
 using TaskManager.UnitOfWork.Interfaces;
 using TaskManager.UnitOfWork.Models;
 
@@ -13,6 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWorkSQL>();
 builder.Services.AddScoped<ILoginDomain, LoginDomain>();
+builder.Services.AddScoped<IProjectDomain, ProjectDomain>();
+builder.Services.AddScoped<IConfigurationDomain, ConfigurationDomain>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -45,6 +48,8 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>(); //Middleware para manejo de las excepciones
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -10,5 +10,7 @@ namespace TaskManager.UnitOfWork.Interfaces
     public interface IunitOfWorkRepository
     {
         ILoginRepository LoginRepository { get; }
+        IProjectRepository ProjectRepository { get; }
+        IConfigurationRepository ConfigurationRepository { get; }
     }
 }

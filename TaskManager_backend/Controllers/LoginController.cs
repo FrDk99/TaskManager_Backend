@@ -20,19 +20,19 @@ namespace TaskManager_backend.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] UserRequest user)
         {
-
-            if(user == null)
+            if (user == null)
             {
-                return BadRequest("Ingrese valores.");
+                throw new ArgumentNullException(nameof(user), "Ingrese valores."); // Esto será manejado por el middleware
             }
 
-            UserResponse? resp = await _loginDomain.Login(user);
+            var resp = await _loginDomain.Login(user);
 
-            if(resp == null)
+            if (resp == null)
             {
-                return BadRequest("Usuario no se encuentra en la base de datos.");
+                throw new Exception("Usuario no se encuentra en la base de datos."); // También será manejado por el middleware
             }
 
+            // Si todo es correcto, retorna OK
             return Ok(resp);
         }
 

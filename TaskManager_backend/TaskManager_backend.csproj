@@ -18,6 +18,7 @@
     <ProjectReference Include="..\TaskManager.Domain.Interfaces\TaskManager.Domain.Interfaces.csproj" />
     <ProjectReference Include="..\TaskManager.Domain.Models\TaskManager.Domain.Models.csproj" />
     <ProjectReference Include="..\TaskManager.Entities\TaskManager.Entities.csproj" />
+    <ProjectReference Include="..\TaskManager.Middleware\TaskManager.Middleware.csproj" />
     <ProjectReference Include="..\TaskManager.UnitOfWork.Models\TaskManager.UnitOfWork.Models.csproj" />
   </ItemGroup>
 
