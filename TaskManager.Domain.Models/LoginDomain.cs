@@ -31,12 +31,10 @@ namespace TaskManager.Domain.Models
 
             var context = _unitOfWork.Create();
 
-            var usuario = await context.Repositories.LoginRepository.Login(request);
+            var usuario = await context.Repositories.LoginRepository.Login(request) ?? throw new Exception("Usuario o contraseña incorrectos.");
+            
+            usuario.Token = GenerateToken(usuario);
 
-            if (usuario != null)
-            {
-                usuario.Token = GenerateToken(usuario);
-            }
 
             return usuario;
 
@@ -51,6 +49,7 @@ namespace TaskManager.Domain.Models
             //Crear los claims
             var claims = new[]
             {
+                new Claim(ClaimTypes.Name, usuario.Id.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, usuario.FirstName),
                 new Claim(ClaimTypes.Email, usuario.Email),
                 //new Claim(ClaimTypes.Role, usuario.Rol),

@@ -10,15 +10,10 @@ using TaskManager.UnitOfWork.Interfaces;
 
 namespace TaskManager.UnitOfWork.Models
 {
-    public class UnitOfWorkRepository : IunitOfWorkRepository
+    public class UnitOfWorkRepository(SqlConnection sqlConnection, SqlTransaction sqlTransaction) : IunitOfWorkRepository
     {
-        public ILoginRepository LoginRepository { get; }
-
-
-        public UnitOfWorkRepository(SqlConnection sqlConnection, SqlTransaction sqlTransaction)
-        {
-            LoginRepository = new LoginRepository(sqlConnection, sqlTransaction);
-        }
-
+        public ILoginRepository LoginRepository { get; } = new LoginRepository(sqlConnection, sqlTransaction);
+        public IProjectRepository ProjectRepository { get; } = new ProjectRepository(sqlConnection, sqlTransaction);
+        public IConfigurationRepository ConfigurationRepository { get; } = new ConfigurationRepository(sqlConnection, sqlTransaction);
     }
 }

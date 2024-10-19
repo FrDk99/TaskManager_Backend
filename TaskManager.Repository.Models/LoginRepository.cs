@@ -18,7 +18,7 @@ namespace TaskManager.Repository.Models
         public async Task<UserResponse?> Login(UserRequest usuario)
         {
 
-            string query = @"SELECT TOP 1 Email, Password FROM Users WHERE Email = @email AND Password = @password";
+            string query = @"SELECT TOP 1 Id, Email, Password FROM Users WHERE Email = @email AND Password = @password";
             UserResponse? response = null;
 
             try
@@ -32,6 +32,7 @@ namespace TaskManager.Repository.Models
                 {
                     response = new UserResponse
                     {
+                        Id = reader.GetInt32("Id"),
                         Email = ConvertHelper.NullToString(reader["Email"]),
                         Password = ConvertHelper.NullToString(reader["Password"]),
                     };

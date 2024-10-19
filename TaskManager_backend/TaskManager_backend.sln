@@ -15,23 +15,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Repository", "4. Reposit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Domain", "5. Domain", "{D012C320-4F5A-4A02-9343-5F437E994C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Entities", "..\TaskManager.Entities\TaskManager.Entities.csproj", "{A1FE9639-CE9A-4E63-A494-F7080D29875C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Entities", "..\TaskManager.Entities\TaskManager.Entities.csproj", "{A1FE9639-CE9A-4E63-A494-F7080D29875C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.UnitOfWork.Interfaces", "..\TaskManager.UnitOfWork.Interfaces\TaskManager.UnitOfWork.Interfaces.csproj", "{F3C4AE66-4C38-45EF-AD0D-1BE9B194E4B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.UnitOfWork.Interfaces", "..\TaskManager.UnitOfWork.Interfaces\TaskManager.UnitOfWork.Interfaces.csproj", "{F3C4AE66-4C38-45EF-AD0D-1BE9B194E4B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.UnitOfWork.Models", "..\TaskManager.UnitOfWork.Models\TaskManager.UnitOfWork.Models.csproj", "{CEEAF9D3-300A-459A-8BAC-8A81BC3A9C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.UnitOfWork.Models", "..\TaskManager.UnitOfWork.Models\TaskManager.UnitOfWork.Models.csproj", "{CEEAF9D3-300A-459A-8BAC-8A81BC3A9C71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Repository.Interfaces", "..\TaskManager.Repository.Interfaces\TaskManager.Repository.Interfaces.csproj", "{D9833E2F-473C-46E1-966A-885E4337F6AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Repository.Interfaces", "..\TaskManager.Repository.Interfaces\TaskManager.Repository.Interfaces.csproj", "{D9833E2F-473C-46E1-966A-885E4337F6AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Repository.Models", "..\TaskManager.Repository.Models\TaskManager.Repository.Models.csproj", "{6E511309-5E1B-4502-B779-4278C231288F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Repository.Models", "..\TaskManager.Repository.Models\TaskManager.Repository.Models.csproj", "{6E511309-5E1B-4502-B779-4278C231288F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Helpers", "6. Helpers", "{4116D493-782C-41DA-8D3A-F618EB49CF8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Domain.Interfaces", "..\TaskManager.Domain.Interfaces\TaskManager.Domain.Interfaces.csproj", "{1B287A2B-55A7-4DF3-901F-7F62BD42B3F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Domain.Interfaces", "..\TaskManager.Domain.Interfaces\TaskManager.Domain.Interfaces.csproj", "{1B287A2B-55A7-4DF3-901F-7F62BD42B3F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Domain.Models", "..\TaskManager.Domain.Models\TaskManager.Domain.Models.csproj", "{FBE4540E-7501-4E67-B31E-4D51A8FDDB3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Domain.Models", "..\TaskManager.Domain.Models\TaskManager.Domain.Models.csproj", "{FBE4540E-7501-4E67-B31E-4D51A8FDDB3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Helpers", "..\TaskManager.Helpers\TaskManager.Helpers.csproj", "{BE9FF193-8BB6-4D66-9420-623A80F1135D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Helpers", "..\TaskManager.Helpers\TaskManager.Helpers.csproj", "{BE9FF193-8BB6-4D66-9420-623A80F1135D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Middleware", "7. Middleware", "{B96C8ACD-3EFD-4545-A845-2C3E12ECE7AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Middleware", "..\TaskManager.Middleware\TaskManager.Middleware.csproj", "{584CA266-69C6-4FE1-AC48-E3D359259334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{BE9FF193-8BB6-4D66-9420-623A80F1135D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE9FF193-8BB6-4D66-9420-623A80F1135D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE9FF193-8BB6-4D66-9420-623A80F1135D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584CA266-69C6-4FE1-AC48-E3D359259334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584CA266-69C6-4FE1-AC48-E3D359259334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584CA266-69C6-4FE1-AC48-E3D359259334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584CA266-69C6-4FE1-AC48-E3D359259334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{1B287A2B-55A7-4DF3-901F-7F62BD42B3F3} = {D012C320-4F5A-4A02-9343-5F437E994C7A}
 		{FBE4540E-7501-4E67-B31E-4D51A8FDDB3C} = {D012C320-4F5A-4A02-9343-5F437E994C7A}
 		{BE9FF193-8BB6-4D66-9420-623A80F1135D} = {4116D493-782C-41DA-8D3A-F618EB49CF8A}
+		{584CA266-69C6-4FE1-AC48-E3D359259334} = {B96C8ACD-3EFD-4545-A845-2C3E12ECE7AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC9FDF6A-D434-4432-A5B4-805464A92A4A}
